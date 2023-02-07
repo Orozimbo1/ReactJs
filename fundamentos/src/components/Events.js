@@ -12,6 +12,9 @@ const Events = () => {
             <div>
                 <button onClick={handleMyEvent}>Clique AQUI</button>
             </div>
+            <div>
+                <button onClick={() => console.log('evento inline')}>Clique AQUI inline</button>
+            </div>
         </div>
     )
 }
