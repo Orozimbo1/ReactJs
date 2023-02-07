@@ -2,7 +2,7 @@ import React from 'react'
 
 const FirstComponent = () => {
   return (
-    <div>Meu primeiro componente</div>
+    <h3>Meu primeiro componente</h3>
   )
 }
 
