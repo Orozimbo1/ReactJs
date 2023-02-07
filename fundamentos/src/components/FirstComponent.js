@@ -1,8 +1,13 @@
 import React from 'react'
 
+import MyComponent from './MyComponent'
+
 const FirstComponent = () => {
   return (
-    <h3>Meu primeiro componente</h3>
+    <div>
+      <h3>Meu primeiro componente</h3>
+      <MyComponent />
+    </div>
   )
 }
 
