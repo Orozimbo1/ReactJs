@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TemplateExpression = () => {
     const name = 'Matheus';
     const data = {
