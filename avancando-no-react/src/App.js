@@ -6,6 +6,7 @@ import ManageData from './components/ManageData';
 import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
+import CarDetail from './components/CarDetail';
 
 function App() {
   const lastName = "Orozimbo"
@@ -24,7 +25,10 @@ function App() {
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      {/* props */}
       <ShowUserName name="Matheus" lastName={lastName} />
+      {/* destructuring props */}
+      <CarDetail brand="Volkswagen" km="360.000" model="Fusca" year="1976" color="Branco" />
     </div>
   );
 }
