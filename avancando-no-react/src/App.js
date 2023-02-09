@@ -8,6 +8,7 @@ import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import CarDetail from './components/CarDetail';
 import Fragment from './components/Fragment';
+import Container from './components/Container';
 
 function App() {
   const lastName = "Orozimbo"
@@ -53,7 +54,12 @@ function App() {
           newCar={car.newCar} 
         />
       ))}
+      {/* fragment */}
       <Fragment />
+      {/* children prop */}
+      <Container>
+        <p>E este é o conteúdo</p>
+      </ Container>
     </div>
   );
 }
