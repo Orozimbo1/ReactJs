@@ -9,6 +9,7 @@ import ShowUserName from './components/ShowUserName';
 import CarDetail from './components/CarDetail';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 
 function App() {
   const lastName = "Orozimbo"
@@ -19,6 +20,10 @@ function App() {
     {id: 3, brand: "Dodje", km: "000.000", model: "Ram 2500", year: 2023, color: "Preto", newCar: true},
     {id: 4, brand: "Ford", km: "360.000", model: "Prêmio", year: 1996, color: "Vermelho", newCar: false}
   ]
+
+  function showMessage() {
+    console.log("Evento do componente pai.")
+  }
 
   return (
     <div>
@@ -60,6 +65,8 @@ function App() {
       <Container>
         <p>E este é o conteúdo</p>
       </ Container>
+      {/* executar função */}
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 }
