@@ -1,10 +1,16 @@
 import './App.css';
 
+import MyComponent from './components/MyComponent';
+
 function App() {
   return (
-    <div>
-      <h1>React com css</h1>
-    </div>
+    <>
+      {/*CSS Global*/}
+      <h1>React com componentes</h1>
+      {/*CSS de componente*/}
+      <MyComponent />
+      <p>Este parágrafo é do App.js</p>
+    </>
   );
 }
 
