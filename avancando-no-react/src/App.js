@@ -28,7 +28,11 @@ function App() {
       {/* props */}
       <ShowUserName name="Matheus" lastName={lastName} />
       {/* destructuring props */}
-      <CarDetail brand="Volkswagen" km="360.000" model="Fusca" year="1976" color="Branco" />
+      <CarDetail brand="Volkswagen" km="360.000" model="Fusca" year={1976} color="Amarelo" newCar={false} />
+      {/* Reproveitando */}
+      <CarDetail brand="Dodje" km="000.000" model="Ram 2500" year={2023} color="Preto" newCar={true} />
+      <CarDetail brand="Ford" km="160.000" model="Escort" year={1996} color="Vermelho" newCar={false} />
+      <CarDetail brand="Fiat" km="660.000" model="Prêmio" year={1986} color="Branco" newCar={false} />
     </div>
   );
 }

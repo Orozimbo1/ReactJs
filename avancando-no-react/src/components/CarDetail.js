@@ -1,4 +1,4 @@
-const CarDetail = ({ brand, km, model, year, color }) => {
+const CarDetail = ({ brand, km, model, year, color, newCar }) => {
   return (
     <div>
       <h2>Detalhes do carro:</h2>
@@ -9,6 +9,7 @@ const CarDetail = ({ brand, km, model, year, color }) => {
         <li>Ano: {year}</li>
         <li>Cor: {color}</li>
       </ul>
+      {newCar && <p>Este carro é novo</p>}
     </div>
   )
 }
