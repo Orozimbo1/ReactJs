@@ -7,6 +7,7 @@ import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import CarDetail from './components/CarDetail';
+import Fragment from './components/Fragment';
 
 function App() {
   const lastName = "Orozimbo"
@@ -52,6 +53,7 @@ function App() {
           newCar={car.newCar} 
         />
       ))}
+      <Fragment />
     </div>
   );
 }
