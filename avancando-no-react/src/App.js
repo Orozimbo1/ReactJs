@@ -13,6 +13,7 @@ import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
 import Message from './components/Message';
 import ChaneMessageState from './components/ChaneMessageState';
+import UserDetails from './components/UserDetails';
 
 function App() {
   const lastName = "Orozimbo"
@@ -28,6 +29,12 @@ function App() {
     {id: 2, brand: "Volkswagen", km: "160.000", model: "Fusca", year: 1976, color: "Branco", newCar: false},
     {id: 3, brand: "Dodje", km: "000.000", model: "Ram 2500", year: 2023, color: "Preto", newCar: true},
     {id: 4, brand: "Ford", km: "360.000", model: "Prêmio", year: 1996, color: "Vermelho", newCar: false}
+  ]
+
+  const users = [
+    {id: 1, name: "Matheus", age: 24, sex: "Masculino"},
+    {id: 2, name: "Stefany", age: 26, sex: "Feminino"},
+    {id: 3, name: "Ana Lívia", age: 0, sex: "Feminino"}
   ]
 
   function showMessage() {
@@ -79,6 +86,15 @@ function App() {
       {/* state lift */}
       <Message msg={message}/>
       <ChaneMessageState handleMessage={handleMessage} />
+      {/* Desafio */}
+      {users.map((user) => (
+        <UserDetails 
+          key={user.id}
+          name={user.name} 
+          age={user.age} 
+          sex={user.sex} 
+        />
+      ))}
     </div>
   );
 }
