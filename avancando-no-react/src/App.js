@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 import City from './assets/city.jpg'
@@ -10,9 +11,17 @@ import CarDetail from './components/CarDetail';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChaneMessageState from './components/ChaneMessageState';
 
 function App() {
   const lastName = "Orozimbo"
+
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  }
 
   const cars = [
     {id: 1, brand: "Fiat", km: "660.000", model: "Prêmio", year: 1986, color: "Branco", newCar: false},
@@ -67,6 +76,9 @@ function App() {
       </ Container>
       {/* executar função */}
       <ExecuteFunction myFunction={showMessage} />
+      {/* state lift */}
+      <Message msg={message}/>
+      <ChaneMessageState handleMessage={handleMessage} />
     </div>
   );
 }
