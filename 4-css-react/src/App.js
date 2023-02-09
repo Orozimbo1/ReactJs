@@ -1,6 +1,7 @@
 import './App.css';
 
 import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 function App() {
   const n = 11
@@ -21,6 +22,8 @@ function App() {
       <h2 style={n < 10 ? ({ color: "purple", backgroundColor: "brown" }) : ({ color: "gray", backgroundColor: "violet" })}>CSS dinâmico</h2>
       {/* Classe dinâmica */}
       <h2 className={redTitle ? ("redTitle") : ("greenTitle")}>Esse título vai ter classe dinâmica</h2>
+      {/* CSS Modules */}
+      <Title />
     </>
   );
 }
