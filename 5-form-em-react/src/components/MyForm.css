@@ -4,7 +4,7 @@ form {
   text-align: left;
 }
 
-input, textarea, select {
+input, textarea, select, label {
   display: block;
   margin-top: 10px;
 }
