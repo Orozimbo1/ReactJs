@@ -29,6 +29,16 @@
       "name": "teste",
       "price": "12",
       "id": 6
+    },
+    {
+      "name": "Berma",
+      "price": "5",
+      "id": 7
+    },
+    {
+      "name": "Cadeira Gamer",
+      "price": "5000",
+      "id": 8
     }
   ]
 }
