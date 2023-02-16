@@ -39,6 +39,11 @@
       "name": "Cadeira Gamer",
       "price": "5000",
       "id": 8
+    },
+    {
+      "name": "Back-End OnlineShop",
+      "price": "6766",
+      "id": 9
     }
   ]
 }
