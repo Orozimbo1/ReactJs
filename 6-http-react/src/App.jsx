@@ -8,10 +8,8 @@ import { useFetch } from './hooks/useFetch'
 const url = 'http://localhost:3000/products'
 
 function App() {
-  const [products, setProducts] = useState([])
-
   // 4 - Custom hook
-  const { data: items, httpConfig, loading } = useFetch(url)
+  const { data: items, httpConfig, loading, errors } = useFetch(url)
 
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
@@ -61,6 +59,7 @@ function App() {
       <h1>Lista de Produtos</h1>
       {/* 6 - Loading */}
       {loading && <p>Carregando ...</p>}
+      {errors && <p>{errors}</p>}
       {!loading && 
       <ul>
       {items && items.map((product) => (
