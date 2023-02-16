@@ -1,5 +1,6 @@
 import './Navbar.css'
 
+// 2 - Link com react router
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
