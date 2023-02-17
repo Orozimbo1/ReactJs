@@ -1,7 +1,7 @@
 import './App.css'
 
 // 1 - config react router
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 
 // pages
 import { Home, About, Product, Info, Page404, Search } from './pages'
@@ -28,6 +28,8 @@ function App() {
           <Route path='/products/:id/info' element={<Info />} />
           {/* 9 - Search  */}
           <Route path='/search' element={<Search />} />
+          {/* 10 - Redirect */}
+          <Route path='/company' element={<Navigate to='/about' />} />
           {/* 6 - No match route */}
           <Route path='*' element={<Page404 />} />
         </Routes>
