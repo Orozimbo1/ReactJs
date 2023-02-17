@@ -4,10 +4,10 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // pages
-import { Home, About, Product, Info, Page404 } from './pages'
+import { Home, About, Product, Info, Page404, Search } from './pages'
 
 // components
-import { Navbar } from './components'
+import { Navbar, SearchForm } from './components'
 
 function App() {
 
@@ -17,6 +17,8 @@ function App() {
       <BrowserRouter>
       {/* 2 - Link com react router */}
         <Navbar />
+        {/* 9 - Search Paramns */}
+        <SearchForm />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -24,6 +26,8 @@ function App() {
           <Route path='/products/:id' element={<Product />} />
           {/* 6 - Nested routes */}
           <Route path='/products/:id/info' element={<Info />} />
+          {/* 9 - Search  */}
+          <Route path='/search' element={<Search />} />
           {/* 6 - No match route */}
           <Route path='*' element={<Page404 />} />
         </Routes>
