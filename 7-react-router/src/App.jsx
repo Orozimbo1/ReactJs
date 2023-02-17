@@ -4,7 +4,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // pages
-import { Home, About } from './pages'
+import { Home, About, Product } from './pages'
 
 // components
 import { Navbar } from './components'
@@ -20,6 +20,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          {/* 4 - Rota dinâmica */}
+          <Route path='/products/:id' element={<Product />} />
         </Routes>
       </BrowserRouter>
     </div>
