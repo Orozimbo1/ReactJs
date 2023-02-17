@@ -14,6 +14,7 @@ const Home = () => {
     <div>
       <h1>Produtos</h1>
       {errors && <p>{errors}</p>}
+      {loading && <p>Carregando...</p>}
       <ul className="products">
         {items && items.map((product) => (
           <li key={product.id}>

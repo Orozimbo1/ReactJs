@@ -4,7 +4,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // pages
-import { Home, About, Product, Info } from './pages'
+import { Home, About, Product, Info, Page404 } from './pages'
 
 // components
 import { Navbar } from './components'
@@ -24,6 +24,8 @@ function App() {
           <Route path='/products/:id' element={<Product />} />
           {/* 6 - Nested routes */}
           <Route path='/products/:id/info' element={<Info />} />
+          {/* 6 - No match route */}
+          <Route path='*' element={<Page404 />} />
         </Routes>
       </BrowserRouter>
     </div>
