@@ -1,13 +1,13 @@
 import styles from './Home.module.css'
 
 // components
-import { HookUseState } from '../../components'
+import { HookUseState, HookUseReducer } from '../../components'
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
       <HookUseState />
+      <HookUseReducer />
     </div>
   )
 }
