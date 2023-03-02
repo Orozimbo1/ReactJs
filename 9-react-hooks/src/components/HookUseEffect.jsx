@@ -17,11 +17,22 @@ const HookUseEffect = () => {
     console.log('Serei executado apenas uma vez!')
   }, [])
 
+  // 3- useEffect, item no array de dependencias -> Será executado toda ez que houver alteração no item que está dentro do array de dependencia
+  const [anotherNumber, setAnotherNumber] = useState(0)
+
+  useEffect(() => {
+    if(anotherNumber > 0) {
+      console.log('Sou executado toda vez que o anotherNumber muda!')
+    }
+  }, [anotherNumber])
+
   return (
     <div>
       <h2>useEffect</h2>
-      <p>{number}</p>
+      <p>Number: {number}</p>
       <button onClick={changeSubmit}>Adicionar 1</button>
+      <p>Another Number: {anotherNumber}</p>
+      <button onClick={() => setAnotherNumber(anotherNumber + 1)}>Mudar Another Number</button>
       <hr />
     </div>
   )
