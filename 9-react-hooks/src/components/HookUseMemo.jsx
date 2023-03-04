@@ -19,6 +19,7 @@ const HookUseMemo = () => {
   return (
     <div>
       <h2>useMemo</h2>
+      <p>Digite um número:</p>
       <input 
         type="text"
         value={number}
