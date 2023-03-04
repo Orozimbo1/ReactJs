@@ -1,7 +1,7 @@
 import styles from './Home.module.css'
 
 // components
-import { HookUseState, HookUseReducer, HookuseEffect, HookUseRef, HookUseCallback, HookUseMemo, HookUseLayoutEffect } from '../../components'
+import { HookUseState, HookUseReducer, HookuseEffect, HookUseRef, HookUseCallback, HookUseMemo, HookUseLayoutEffect, HookUseImperativeHandle } from '../../components'
 
 // context
 import { useContext } from 'react'
@@ -22,6 +22,7 @@ const Home = () => {
       <HookUseCallback />
       <HookUseMemo />
       <HookUseLayoutEffect />
+      <HookUseImperativeHandle />
     </div>
   )
 }
