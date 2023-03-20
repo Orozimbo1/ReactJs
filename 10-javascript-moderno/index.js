@@ -97,3 +97,8 @@ const users = [
 
 users.map((user) => user.age = Math.random()) // Percorre todos os elementos de um array como um loop podendo modificar os valores
 console.log(users)
+
+// Template literals, fforma mais simples de concatenar uma variavel à uma string
+const lastName = 'Orozimbo'
+console.log('Matheus ' + lastName) // forma antiga
+console.log(`Matheus ${lastName}`) // forma mais atual
