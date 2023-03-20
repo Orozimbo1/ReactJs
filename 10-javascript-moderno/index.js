@@ -81,3 +81,9 @@ const user = {
 }
 user.sayUserName()
 user.sayUserNameArrow()
+
+// Filter, metodo de um array
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+const oddNumbers =numbers.filter((number) => number % 2 !== 0) // filtra o array retornando o que corresponde a exceção
+console.log(oddNumbers)
