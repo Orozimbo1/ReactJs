@@ -82,13 +82,13 @@ const user = {
 user.sayUserName()
 user.sayUserNameArrow()
 
-// Filter, metodo de um array
+// 3- Filter, metodo de um array
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 const oddNumbers =numbers.filter((number) => number % 2 !== 0) // filtra o array retornando o que corresponde a exceção
 console.log(oddNumbers)
 
-// Map, metodo de um array
+// 4- Map, metodo de um array
 const users = [
   {name: 'Matheus', age: 25},
   {name: 'Andre', age: 35},
@@ -98,12 +98,12 @@ const users = [
 users.map((user) => user.age = Math.random()) // Percorre todos os elementos de um array como um loop podendo modificar os valores
 console.log(users)
 
-// Template literals, forma mais simples de concatenar uma variavel à uma string
+// 5- Template literals, forma mais simples de concatenar uma variavel à uma string
 const lastName = 'Orozimbo'
 console.log('Matheus ' + lastName) // forma antiga
 console.log(`Matheus ${lastName}`) // forma mais atual
 
-// Destructuring
+// 6- Destructuring
 
 const fruits = ['Maçã', 'Abacaxi', 'Limão']
 const [f1, f2, f3] = fruits
@@ -111,7 +111,23 @@ console.log(f1)
 console.log(f2)
 console.log(f3)
 
-// Spread operators '...'
+// 7- Spread operators '...'
 const objects = ['Faca', 'Tabua', 'Colher']
 const newObjects = ['Garfo', 'Concha', ...objects]
 console.log(newObjects)
+
+// 8- Classes, recurso fundamental para trabalhar com programção orientada a objeto
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  productWithDiscount(discount) {
+    return this.price * ((100 - discount) / 100)
+  }
+}
+
+const shirt = new Product('Camisa Branca', 19.90)
+console.log(shirt)
+console.log(shirt.productWithDiscount(10))
