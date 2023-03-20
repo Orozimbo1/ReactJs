@@ -87,3 +87,13 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 const oddNumbers =numbers.filter((number) => number % 2 !== 0) // filtra o array retornando o que corresponde a exceção
 console.log(oddNumbers)
+
+// Map, metodo de um array
+const users = [
+  {name: 'Matheus', age: 25},
+  {name: 'Andre', age: 35},
+  {name: 'Vanessa', age: 15},
+]
+
+users.map((user) => user.age = Math.random()) // Percorre todos os elementos de um array como um loop podendo modificar os valores
+console.log(users)
