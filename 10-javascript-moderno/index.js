@@ -102,3 +102,12 @@ console.log(users)
 const lastName = 'Orozimbo'
 console.log('Matheus ' + lastName) // forma antiga
 console.log(`Matheus ${lastName}`) // forma mais atual
+
+// Destructuring
+
+const fruits = ['Maçã', 'Abacaxi', 'Limão']
+const [f1, f2, f3] = fruits
+console.log(f1)
+console.log(f2)
+console.log(f3)
+
