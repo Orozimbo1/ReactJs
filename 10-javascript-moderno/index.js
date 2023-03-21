@@ -131,3 +131,25 @@ class Product {
 const shirt = new Product('Camisa Branca', 19.90)
 console.log(shirt)
 console.log(shirt.productWithDiscount(10))
+
+// 9- Heranca
+class ProductWithAttributes extends Product {
+  constructor(name, price, colors) {
+    super(name, price)
+    this.colors = colors;
+  }
+
+  showColors() {
+    console.log('As cores são:')
+    this.colors.forEach((color) => {
+      console.log(color)
+    })
+  }
+}
+
+const hat = new ProductWithAttributes('Chapéu', 30, ['Amarelo', 'Azul', 'Vermelho'])
+console.log(hat.name)
+console.log(hat.price)
+console.log(hat.colors)
+hat.showColors()
+console.log(hat.productWithDiscount(10))
