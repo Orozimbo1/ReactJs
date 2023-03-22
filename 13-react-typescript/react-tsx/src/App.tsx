@@ -5,7 +5,7 @@ import FirstComponent from './components/FirstComponent'
 
 // 5- Destructuring nas props
 import SecondComponent from './components/SecondComponent'
-import Destructuring from './components/Destructuring'
+import Destructuring, { Category } from './components/Destructuring'
 
 // 6- useState no ts
 import State from './components/State'
@@ -29,7 +29,7 @@ function App() {
       <h3>{userGreeting(name)}</h3>
       <FirstComponent />
       <SecondComponent name='Segundo' />
-      <Destructuring title='Destruturação' content='Aula de desestruturação com typescript e react' commentsQty={999} tags={['vivaoestudo', 'react', 'typescript']} />
+      <Destructuring title='Destruturação' content='Aula de desestruturação com typescript e react' commentsQty={999} tags={['vivaoestudo', 'react', 'typescript']} category={Category.TS} />
       <State />
     </div> 
   )
