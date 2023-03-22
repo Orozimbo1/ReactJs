@@ -1,4 +1,5 @@
 import './App.css'
+import { createContext } from 'react'
 
 // 4- Importação de componentes
 import FirstComponent from './components/FirstComponent'
@@ -13,6 +14,15 @@ import State from './components/State'
 // 8- type
 type textOrNull = string | null
 type fixed = 'Isso' | 'Ou' | 'Aquilo'
+
+// 9- context
+interface IAppContext {
+  language: string,
+  framework: string,
+  project: number
+}
+
+export const AppContext = createContext<IAppContext | null>(null)
 
 function App() {
 
@@ -34,18 +44,27 @@ function App() {
 
   const testandoFixed: fixed = 'Ou'
 
+  // 9- context
+  const constextValue: IAppContext = {
+    language: 'Javascript',
+    framework: 'Express',
+    project: 5
+  }
+
   return (
-    <div className="App">
-      <h1>Typescript com React</h1>
-      <h2>Nome: {name}, {age} anos. Trabalhando: {isWorking && 'Sim'}</h2>
-      <h3>{userGreeting(name)}</h3>
-      <FirstComponent />
-      <SecondComponent name='Segundo' />
-      <Destructuring title='Destruturação' content='Aula de desestruturação com typescript e react' commentsQty={999} tags={['vivaoestudo', 'react', 'typescript']} category={Category.TS} />
-      <State />
-      {myText && <p>Tem texto na variável</p>}
-      {mySecondText && <p>Tem texto na variável</p>}
-    </div> 
+    <AppContext.Provider value={constextValue} >
+      <div className="App">
+        <h1>Typescript com React</h1>
+        <h2>Nome: {name}, {age} anos. Trabalhando: {isWorking && 'Sim'}</h2>
+        <h3>{userGreeting(name)}</h3>
+        <FirstComponent />
+        <SecondComponent name='Segundo' />
+        <Destructuring title='Destruturação' content='Aula de desestruturação com typescript e react' commentsQty={999} tags={['vivaoestudo', 'react', 'typescript']} category={Category.TS} />
+        <State />
+        {myText && <p>Tem texto na variável</p>}
+        {mySecondText && <p>Tem texto na variável</p>}
+      </div>
+    </AppContext.Provider> 
   )
 }
 
