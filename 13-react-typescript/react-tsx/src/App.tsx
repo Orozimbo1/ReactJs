@@ -1,5 +1,8 @@
 import './App.css'
 
+// 4- Importação de componentes
+import FirstComponent from './components/FirstComponent'
+
 function App() {
 
   // 1- Variáveis
@@ -17,6 +20,7 @@ function App() {
       <h1>Typescript com React</h1>
       <h2>Nome: {name}, {age} anos. Trabalhando: {isWorking && 'Sim'}</h2>
       <h3>{userGreeting(name)}</h3>
+      <FirstComponent />
     </div> 
   )
 }
