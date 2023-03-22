@@ -3,6 +3,10 @@ import './App.css'
 // 4- Importação de componentes
 import FirstComponent from './components/FirstComponent'
 
+// 5- Destructuring nas props
+import SecondComponent from './components/SecondComponent'
+import Destructuring from './components/Destructuring'
+
 function App() {
 
   // 1- Variáveis
@@ -21,6 +25,8 @@ function App() {
       <h2>Nome: {name}, {age} anos. Trabalhando: {isWorking && 'Sim'}</h2>
       <h3>{userGreeting(name)}</h3>
       <FirstComponent />
+      <SecondComponent name='Segundo' />
+      <Destructuring title='Destruturação' content='Aula de desestruturação com typescript e react' commentsQty={999} tags={['vivaoestudo', 'react', 'typescript']} />
     </div> 
   )
 }
