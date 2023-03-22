@@ -7,6 +7,9 @@ import FirstComponent from './components/FirstComponent'
 import SecondComponent from './components/SecondComponent'
 import Destructuring from './components/Destructuring'
 
+// 6- useState no ts
+import State from './components/State'
+
 function App() {
 
   // 1- Variáveis
@@ -27,6 +30,7 @@ function App() {
       <FirstComponent />
       <SecondComponent name='Segundo' />
       <Destructuring title='Destruturação' content='Aula de desestruturação com typescript e react' commentsQty={999} tags={['vivaoestudo', 'react', 'typescript']} />
+      <State />
     </div> 
   )
 }
