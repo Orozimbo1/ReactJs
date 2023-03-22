@@ -8,6 +8,9 @@ import FirstComponent from './components/FirstComponent'
 import SecondComponent from './components/SecondComponent'
 import Destructuring, { Category } from './components/Destructuring'
 
+// 10- Consumindo contexto
+import Context from './components/Context'
+
 // 6- useState no ts
 import State from './components/State'
 
@@ -63,6 +66,7 @@ function App() {
         <State />
         {myText && <p>Tem texto na variável</p>}
         {mySecondText && <p>Tem texto na variável</p>}
+        <Context />
       </div>
     </AppContext.Provider> 
   )
