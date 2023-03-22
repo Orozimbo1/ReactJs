@@ -7,7 +7,7 @@ type Props = {
   commentsQty: number,
   tags: string[]
 
-  // 8- Enum
+  // 7- Enum
   category: Category
 }
 
